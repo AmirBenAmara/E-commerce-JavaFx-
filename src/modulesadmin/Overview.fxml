@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="1100.0" stylesheets="@../studentfx/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modulesadmin.OverviewController">
+   <children>
+      <HBox fx:id="groupHolder" layoutX="-1.0" layoutY="13.0" prefHeight="181.0" prefWidth="1100.0">
+         <children>
+            <Group fx:id="groupRegistered">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #1564C0; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/register.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #5DB95C; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="19.0" layoutY="104.0" prefHeight="22.0" prefWidth="229.0" text="Total number of treated claims">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="4.0" prefHeight="22.0" prefWidth="88.0" text="REGISTERED" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="103">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupTarget">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #F87951; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/target.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #D8544F; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="19.0" layoutY="104.0" prefHeight="22.0" prefWidth="229.0" text="Total number of untreated claims">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="4.0" prefHeight="22.0" prefWidth="88.0" text="TARGET" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="103">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupGents">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: rgb(0, 170, 207); -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/Male%20-%2001.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #5DB95C; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="19.0" layoutY="104.0" prefHeight="22.0" prefWidth="229.0" text="Total number of users">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="4.0" prefHeight="22.0" prefWidth="88.0" text="GENTS" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="103">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupLadies">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #00B3A0; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/Female%20-%2001.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #5DB95C; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="19.0" layoutY="104.0" prefHeight="22.0" prefWidth="229.0" text="Total number of product">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="4.0" prefHeight="22.0" prefWidth="88.0" text="LADIES" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="103">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+         </children>
+      </HBox>
+      <StackPane fx:id="deptStackPane" layoutX="42.0" layoutY="246.0" prefHeight="408.0" prefWidth="999.0">
+         <children>
+            <LineChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="999.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </StackPane>
+      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="195.0" onAction="#sendNewsletter" prefHeight="46.0" prefWidth="215.0" style="-fx-background-color: #0073B7;" text="Send Newsletter" textFill="#fffefe">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEND" size="14.0" wrappingWidth="19.0" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parentPane" prefHeight="670.0" prefWidth="1100.0" stylesheets="@../studentfx/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EshopDash.FirstRegisterController">
+   <children>
+      <AnchorPane layoutX="41.0" layoutY="44.0" prefHeight="602.0" prefWidth="332.0" styleClass="card-white">
+         <children>
+            <GridPane layoutX="14.0" layoutY="44.0" prefHeight="507.0" prefWidth="299.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="171.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="txtFname" focusColor="#2196f3" labelFloat="true" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0" promptText="First Name">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtLname" focusColor="#2196f3" labelFloat="true" maxWidth="289.0" minWidth="224.0" prefHeight="38.0" prefWidth="289.0" promptText="Last Name" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtMobile" focusColor="#2196f3" labelFloat="true" maxWidth="284.0" minWidth="224.0" onMouseReleased="#mobiletest" prefHeight="38.0" prefWidth="284.0" promptText="Mobile Number" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtEmail" focusColor="#2196f3" labelFloat="true" maxWidth="288.0" minWidth="224.0" prefHeight="38.0" prefWidth="288.0" promptText="Email address" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtLocation" focusColor="#2196f3" labelFloat="true" maxWidth="294.0" minWidth="224.0" prefHeight="38.0" prefWidth="294.0" promptText="Location" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font></JFXTextField>
+                  <VBox prefHeight="218.0" prefWidth="299.0" GridPane.rowIndex="6">
+                     <children>
+                        <Group>
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </Group>
+                     </children>
+                  </VBox>
+                  <JFXTextField fx:id="txtZipCode" focusColor="#2196f3" labelFloat="true" maxWidth="294.0" minWidth="224.0" prefHeight="39.0" prefWidth="294.0" promptText="Zip Code" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+            <VBox layoutX="384.0" layoutY="279.0" prefHeight="55.0" prefWidth="254.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="394.0" layoutY="44.0" prefHeight="609.0" prefWidth="332.0" styleClass="card-white">
+         <children>
+            <JFXTextField fx:id="txtCIN" focusColor="#2196f3" labelFloat="true" layoutX="17.0" layoutY="198.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0" promptText="CIN">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUserName" focusColor="#2196f3" labelFloat="true" layoutX="17.0" layoutY="277.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0" promptText="User Name">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPasswordConfirmation" focusColor="#2196f3" labelFloat="true" layoutX="19.0" layoutY="433.0" prefHeight="38.0" prefWidth="295.0" promptText="Password Confirmation">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="txtPassword" focusColor="#2196f3" labelFloat="true" layoutX="17.0" layoutY="362.0" prefHeight="38.0" prefWidth="295.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXDatePicker fx:id="birthday" defaultColor="#097cff" layoutX="14.0" layoutY="74.0" prefHeight="25.0" prefWidth="315.0" promptText="Birth Date" />
+            <JFXTextField fx:id="txtParrain" focusColor="#2196f3" labelFloat="true" layoutX="16.0" layoutY="127.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0" promptText="Referrer">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="744.0" layoutY="44.0" prefHeight="253.0" prefWidth="332.0" styleClass="card-white">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="253.0" prefWidth="332.0" style="-fx-background-color: #009ABF;">
+               <children>
+                  <ImageView fx:id="image" fitHeight="253.0" fitWidth="332.0" onMouseClicked="#choose" pickOnBounds="true">
+                     <image>
+                        <Image url="@../icons/pic.png" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="175.0" layoutY="55.0" prefHeight="46.0" prefWidth="139.0" spacing="10.0">
+               <children>
+                  <VBox>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="744.0" layoutY="313.0" prefHeight="260.0" prefWidth="332.0" styleClass="card-white">
+         <children>
+            <Pane prefHeight="168.0" prefWidth="332.0" style="-fx-background-color: #009ABF;">
+               <children>
+                  <ProgressBar fx:id="progressPersonal" layoutX="42.0" layoutY="38.0" prefHeight="18.0" prefWidth="248.0" progress="0.0" />
+                  <Label fx:id="lblComplete" alignment="CENTER" layoutX="92.0" layoutY="70.0" prefHeight="18.0" prefWidth="129.0" text="0% complete" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <HBox layoutX="80.0" layoutY="197.0" prefHeight="38.0" prefWidth="194.0" spacing="6.0">
+               <children>
+                  <JFXButton fx:id="btnClear" buttonType="RAISED" onAction="#clearFields" prefHeight="35.0" prefWidth="90.0" ripplerFill="#f52020" style="-fx-background-color: #F39C12;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSave" buttonType="RAISED" onMouseClicked="#registre" prefHeight="35.0" prefWidth="90.0" ripplerFill="#3f25d7" style="-fx-background-color: rgb(0, 170, 207);" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CHECK_ALL" size="18.0" wrappingWidth="22.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="301.0" layoutY="16.0" prefHeight="51.0" prefWidth="186.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-background-color: rgb(20, 95, 183,0.6);">
+         <children>
+            <Label layoutX="33.0" layoutY="8.0" prefHeight="35.0" prefWidth="129.0" text="Personal Details" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="865.0" layoutY="573.0" onMouseClicked="#backLoginUser" prefHeight="35.0" prefWidth="90.0" ripplerFill="#f52020" style="-fx-background-color: #f52020;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

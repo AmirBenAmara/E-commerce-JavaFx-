@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@../studentfx/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modulesadmin.ProductViewController">
+   <children>
+      <StackPane prefHeight="680.0" prefWidth="1100.0">
+         <children>
+            <AnchorPane fx:id="holderAnchor" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutX="751.0" layoutY="49.0" prefHeight="611.0" prefWidth="320.0" styleClass="card-white">
+                     <children>
+                        <StackPane layoutX="47.0" layoutY="39.0" prefHeight="611.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane prefHeight="180.0" prefWidth="320.0">
+                                       <children>
+                                          <ImageView fx:id="id_img_product" fitHeight="180.0" fitWidth="320.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../icons/background.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <AnchorPane prefHeight="432.0" prefWidth="320.0">
+                                       <children>
+                                          <Separator layoutX="24.0" layoutY="125.0" prefHeight="0.0" prefWidth="290.0" />
+                                          <Separator layoutX="24.0" layoutY="243.0" prefHeight="0.0" prefWidth="290.0" />
+                                          <VBox layoutX="50.0" layoutY="37.0" prefHeight="85.0" prefWidth="221.0">
+                                             <children>
+                                                <Label fx:id="lblEmail" prefHeight="30.0" prefWidth="221.0" textFill="#797878">
+                                                   <font>
+                                                      <Font name="Roboto Regular" size="14.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#404bb6" glyphName="ENVELOPE" size="16.0" wrappingWidth="28.0" />
+                                                   </graphic>
+                                                </Label>
+                                                <Label fx:id="lblPhone" prefHeight="30.0" prefWidth="221.0" textFill="#797878">
+                                                   <font>
+                                                      <Font name="Roboto Regular" size="14.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#404bb6" glyphName="PHONE" size="16.0" wrappingWidth="28.0" />
+                                                   </graphic>
+                                                </Label>
+                                                <Label fx:id="lblLocation" prefHeight="30.0" prefWidth="221.0" textFill="#797878">
+                                                   <font>
+                                                      <Font name="Roboto Regular" size="14.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#404bb6" glyphName="MAP_MARKER" size="16.0" wrappingWidth="28.0" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="80.0" layoutY="293.0" prefHeight="17.0" prefWidth="92.0" text="customer id" textFill="#a19d9d">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox layoutX="50.0" layoutY="138.0" prefHeight="90.0" prefWidth="221.0">
+                                             <children>
+                                                <Label fx:id="lblDepartment" prefHeight="30.0" prefWidth="214.0" textFill="#797878">
+                                                   <font>
+                                                      <Font name="Roboto Regular" size="14.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#404bb6" glyphName="MORTAR_BOARD" size="16.0" wrappingWidth="28.0" />
+                                                   </graphic>
+                                                </Label>
+                                                <Label fx:id="lblLevel" prefHeight="30.0" prefWidth="214.0" textFill="#797878">
+                                                   <font>
+                                                      <Font name="Roboto Regular" size="14.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#404bb6" glyphName="SITEMAP" size="16.0" wrappingWidth="28.0" />
+                                                   </graphic>
+                                                </Label>
+                                                <Label fx:id="lblCourse" prefHeight="30.0" prefWidth="214.0" textFill="#797878">
+                                                   <font>
+                                                      <Font name="Roboto Regular" size="14.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#404bb6" glyphName="EXTERNAL_LINK_SQUARE" size="16.0" wrappingWidth="28.0" />
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <Label fx:id="lblFee" alignment="CENTER_RIGHT" layoutX="236.0" layoutY="293.0" prefHeight="17.0" prefWidth="70.0" textFill="#868282">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="77.0" layoutY="316.0" prefHeight="2.0" prefWidth="233.0" />
+                                          <Label layoutX="80.0" layoutY="326.0" prefHeight="17.0" prefWidth="70.0" text="Name " textFill="#a19d9d">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblPaid" alignment="CENTER_RIGHT" layoutX="236.0" layoutY="326.0" prefHeight="17.0" prefWidth="70.0" textFill="#868282">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="77.0" layoutY="349.0" prefHeight="2.0" prefWidth="233.0" />
+                                          <Label layoutX="80.0" layoutY="358.0" prefHeight="17.0" prefWidth="70.0" text="LastName" textFill="#a19d9d">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblBalance" alignment="CENTER_RIGHT" layoutX="236.0" layoutY="358.0" prefHeight="17.0" prefWidth="70.0" textFill="#868282">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="77.0" layoutY="381.0" prefHeight="2.0" prefWidth="233.0" />
+                                          <Label fx:id="lblName1" alignment="CENTER" layoutX="55.0" prefHeight="36.0" prefWidth="214.0" text="PRODUCT INFO" textFill="#364479">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                 </children>
+                              </VBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton fx:id="rmbutton" buttonType="RAISED" layoutX="44.0" layoutY="573.0" onAction="#removeProduct" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: red;" text="Remove" textFill="#f2eeee">
+                                       <font>
+                                          <Font name="Roboto Black" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="BAN" size="14.0" wrappingWidth="19.0" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="enbutton" buttonType="RAISED" layoutX="183.0" layoutY="573.0" onAction="#enableProduct" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: green;" text="Enable" textFill="#e7f5e7">
+                                       <font>
+                                          <Font name="Roboto Black" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="14.0" wrappingWidth="19.0" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></AnchorPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="26.0" layoutY="47.0" prefHeight="106.0" prefWidth="706.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;">
+                     <children>
+                        <Pane layoutX="22.0" layoutY="-36.0" prefHeight="106.0" prefWidth="115.0" style="-fx-background-color: #0073B7; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+                           <children>
+                              <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="59.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/search.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="173.0" layoutY="8.0" prefHeight="28.0" prefWidth="115.0" text="Filter by :" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Black" size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXRadioButton fx:id="rbAll" layoutX="259.0" layoutY="63.0" prefHeight="28.0" prefWidth="77.0" selected="true" styleClass="custom-jfx-check-box" text="All" textFill="#fffdfd">
+                           <font>
+                              <Font name="Roboto Black" size="12.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="filter" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rbEnable" layoutX="353.0" layoutY="63.0" prefHeight="28.0" prefWidth="77.0" styleClass="custom-jfx-check-box" text="Enable" textFill="#fffdfd" toggleGroup="$filter">
+                           <font>
+                              <Font name="Roboto Black" size="12.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rbDisable" layoutX="457.0" layoutY="63.0" prefHeight="28.0" prefWidth="85.0" styleClass="custom-jfx-check-box" text="Disable" textFill="#fffdfd" toggleGroup="$filter">
+                           <font>
+                              <Font name="Roboto Black" size="12.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXButton buttonType="RAISED" layoutX="596.0" layoutY="60.0" onAction="#searchProduct" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #0073B7;" text="Search" textFill="#fffefe">
+                           <font>
+                              <Font name="Roboto Black" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" wrappingWidth="19.0" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <JFXListView fx:id="_list" layoutX="26.0" layoutY="172.0" onEditStart="#affProduct" onMouseClicked="#selection" prefHeight="505.0" prefWidth="706.0" />
+               </children>
+            </AnchorPane>
+           
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

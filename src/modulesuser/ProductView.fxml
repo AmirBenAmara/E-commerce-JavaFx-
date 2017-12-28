@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modulesuser.ProductViewController">
+   <children>
+      <ListView fx:id="llistproduits1" layoutX="3.0" layoutY="89.0" onMouseClicked="#onMouseclicked" prefHeight="514.0" prefWidth="750.0" />
+      <AnchorPane prefHeight="89.0" prefWidth="750.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;">
+         <children>
+            <Pane layoutX="14.0" layoutY="7.0" prefHeight="82.0" prefWidth="85.0" style="-fx-background-color: #0073B7; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+               <children>
+                  <ImageView fitHeight="69.0" fitWidth="68.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../EshopFX3/src/icons/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXTextField fx:id="recherche1" focusColor="#fcfcfc" labelFloat="true" layoutX="200.0" layoutY="45.0" maxWidth="214.0" minWidth="214.0" onKeyTyped="#onFiltrer" prefHeight="31.0" prefWidth="214.0" promptText="Search by name or id " unFocusColor="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="434.0" layoutY="48.0" onAction="#onRefresh" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #0073B7;" text="Refresh " textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Black" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="14.0" wrappingWidth="19.0" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="formAjout1" layoutX="766.0" layoutY="34.0" prefHeight="611.0" prefWidth="320.0" styleClass="card-white">
+         <children>
+            <ImageView fx:id="imageproduit1" fitHeight="150.0" fitWidth="200.0" layoutX="60.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXTextField fx:id="inputref1" layoutX="79.0" layoutY="186.0" maxWidth="193.0" minWidth="171.0" prefHeight="31.0" prefWidth="193.0" promptText="reference" />
+            <JFXTextArea fx:id="inputdesc1" layoutX="85.0" layoutY="236.0" maxWidth="193.0" minWidth="180.0" prefHeight="68.0" prefWidth="180.0" promptText="Description" />
+            <JFXTextField fx:id="inputprix1" layoutX="79.0" layoutY="336.0" prefWidth="200.0" promptText="Prix" />
+            <JFXTextField fx:id="inputqte1" layoutX="79.0" layoutY="386.0" prefWidth="200.0" promptText="Quantite" />
+            <JFXTextField fx:id="inputpromo1" layoutX="79.0" layoutY="436.0" prefWidth="200.0" promptText="Promotion" />
+            <JFXTextField fx:id="inputcat1" layoutX="79.0" layoutY="486.0" prefWidth="200.0" promptText="Categorie" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@../studentfx/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modulesuser.HistoryController">
+   <children>
+      <StackPane prefHeight="680.0" prefWidth="1100.0">
+         <children>
+            <AnchorPane fx:id="holderAnchor" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableCommandes" layoutX="24.0" layoutY="173.0" onMouseClicked="#CommandeSelected" prefHeight="490.0" prefWidth="706.0">
+                    <columns>
+                      <TableColumn fx:id="DateCommande" prefWidth="125.0" text="Date de commande" />
+                        <TableColumn fx:id="ProduitCommande" prefWidth="233.0" text="Produit" />
+                      <TableColumn fx:id="QuantiteProduitCommande" minWidth="0.0" prefWidth="48.0" text="Qantité" />
+                        <TableColumn fx:id="PrixProduitCommande" minWidth="0.0" prefWidth="118.0" text="Prix unitaire" />
+                        <TableColumn fx:id="PrixTotalCommande" minWidth="0.0" prefWidth="101.0" text="Prix total" />
+                        <TableColumn fx:id="Etat" minWidth="0.0" prefWidth="79.0" text="Etat" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane layoutX="26.0" layoutY="47.0" prefHeight="106.0" prefWidth="706.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;">
+                     <children>
+                        <Pane layoutX="22.0" layoutY="-36.0" prefHeight="106.0" prefWidth="115.0" style="-fx-background-color: #0073B7; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+                           <children>
+                              <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/searchCommandes.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <JFXTextField fx:id="searchText" focusColor="#fcfcfc" labelFloat="true" layoutX="353.0" layoutY="42.0" maxWidth="214.0" minWidth="214.0" onKeyPressed="#TextEditEnCours" onKeyReleased="#TextEditEnCours" onKeyTyped="#TextEditEnCours" prefHeight="31.0" prefWidth="214.0" promptText="Search" unFocusColor="WHITE">
+                           <font>
+                              <Font name="Roboto Black" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="searchCommande" buttonType="RAISED" layoutX="596.0" layoutY="47.0" onAction="#clickSearchCommande" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #0073B7;" text="Search" textFill="#fffefe">
+                           <font>
+                              <Font name="Roboto Black" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" wrappingWidth="19.0" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="764.0" layoutY="247.0" prefHeight="30.0" prefWidth="266.0" text="Description : " />
+                  <ImageView accessibleHelp="L'image du produit" fitHeight="150.0" fitWidth="249.0" focusTraversable="true" layoutX="836.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/shopping_cart.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="764.0" layoutY="277.0" prefHeight="30.0" prefWidth="266.0" text="Exemplaires restants :" />
+                  <Label layoutX="764.0" layoutY="307.0" prefHeight="30.0" prefWidth="266.0" text="Prix du produit : " />
+                  <TextArea fx:id="commentaires" editable="false" layoutX="758.0" layoutY="349.0" prefHeight="258.0" prefWidth="322.0" />
+                  <TextField fx:id="commentaire" layoutX="758.0" layoutY="622.0" onAction="#commenter" prefHeight="41.0" prefWidth="322.0" promptText="Partager votre avis" />
+                  <TextField fx:id="productName" editable="false" layoutX="880.0" layoutY="250.0" prefHeight="25.0" prefWidth="197.0" promptText="Selectionnez une commande" />
+                  <TextField fx:id="quantityForSell" editable="false" layoutX="880.0" layoutY="280.0" prefHeight="25.0" prefWidth="197.0" promptText="Selectionnez une commande" />
+                  <TextField fx:id="productPrice" editable="false" layoutX="880.0" layoutY="310.0" prefHeight="25.0" prefWidth="197.0" promptText="Selectionnez une commande" />
+                  <Label fx:id="alertNotSelected" layoutX="780.0" layoutY="607.0" prefHeight="17.0" prefWidth="280.0" text="Merci de selectionner une commande pour commenter." textAlignment="CENTER" textFill="#e81010" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
