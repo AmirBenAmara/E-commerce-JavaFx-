@@ -120,6 +120,14 @@ public class OverviewController implements Initializable {
         tray.setImage(img);
         tray.showAndWait();
     }
+    
+    SendMail s = new SendMail();
+     s.send(         "tooo email " 
+                    , "subject:E-SHOP Newsletter"
+                    ,"msg :visit our website https://www.amazon.com/ ,new products are ready for sale"                    
+                    ," goldsolutioneshop@gmail.com"
+                    , "goldsolutioneshop1221");
+    
 }
    
 

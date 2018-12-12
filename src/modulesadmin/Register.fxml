@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
@@ -60,7 +61,8 @@
                      <font>
                         <Font name="Roboto Medium" size="14.0" />
                      </font></JFXTextField>
-                  <VBox prefHeight="131.0" prefWidth="299.0" GridPane.rowIndex="5">
+                  <VBox prefHei
+ght="131.0" prefWidth="299.0" GridPane.rowIndex="5">
                      <children>
                         <Label styleClass="control-label" text="Gender">
                            <VBox.margin>

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@../studentfx/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modulesuser.ClaimController">
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@../studentfx/custom.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modulesuser.ClaimController">
    <children>
       <StackPane prefHeight="680.0" prefWidth="1100.0">
          <children>
@@ -21,7 +21,7 @@
                      <children>
                         <Pane layoutX="22.0" layoutY="-36.0" prefHeight="106.0" prefWidth="115.0" style="-fx-background-color: #0073B7; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
                            <children>
-                              <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="12.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="12.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../icons/ClaimCreatorPicture.png" />
                                  </image>
